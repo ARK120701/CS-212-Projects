@@ -1,1 +1,25 @@
+import javax.swing.JOptionPane;
+public class  IslamicInheritanceCalculator {
+    public static void main (String[] args){
+       
+        int capECounter=0, lowerECounter=0;
+        String s = JOptionPane.showInputDialog("Enter a sentence, Enter stop to end");
+       
+        while(! s.equalsIgnoreCase("Stop")){  
+            for(int i=0;i<s.length();i++){
+                if(s.charAt(i)=='e') lowerECounter++;
+                else if(s.charAt(i)=='E') capECounter++;
+             }
+             s = JOptionPane.showInputDialog("Enter a sentence, Enter stop to end");
 
+        }
+        
+
+        
+        JOptionPane.showMessageDialog(null, "number of lower case e's: "+lowerECounter+"\n"+"number of capital E's: "+capECounter );
+     //   JOptionPane.showMessageDialog(null, "number of capital E's: "+capECounter);
+        // System.out.println(s);
+
+        
+    }
+}
